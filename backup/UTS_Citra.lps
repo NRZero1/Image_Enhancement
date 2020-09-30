@@ -12,19 +12,19 @@
         <WindowIndex Value="-1"/>
         <TopLine Value="-1"/>
         <CursorPos X="-1" Y="-1"/>
-        <UsageCount Value="83"/>
+        <UsageCount Value="87"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\Prak04\utama.pas"/>
+        <Filename Value="utama.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormUtama"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Utama"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="90"/>
-        <CursorPos X="25" Y="98"/>
-        <UsageCount Value="83"/>
+        <TopLine Value="971"/>
+        <CursorPos X="8" Y="991"/>
+        <UsageCount Value="87"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit1>
@@ -52,31 +52,127 @@
         <UsageCount Value="5"/>
       </Unit4>
     </Units>
-    <JumpHistory Count="6" HistoryIndex="5">
+    <JumpHistory Count="30" HistoryIndex="29">
       <Position1>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="919" Column="19" TopLine="909"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="324" Column="3" TopLine="322"/>
       </Position1>
       <Position2>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="920" Column="19" TopLine="910"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="333" Column="5" TopLine="312"/>
       </Position2>
       <Position3>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="921" Column="19" TopLine="911"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="334" Column="5" TopLine="313"/>
       </Position3>
       <Position4>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="920" Column="19" TopLine="910"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="925" Column="3" TopLine="921"/>
       </Position4>
       <Position5>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="921" Column="19" TopLine="911"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="390" Column="3" TopLine="386"/>
       </Position5>
       <Position6>
-        <Filename Value="..\Prak04\utama.pas"/>
-        <Caret Line="944" Column="9" TopLine="752"/>
+        <Filename Value="utama.pas"/>
+        <Caret Line="418" Column="3" TopLine="414"/>
       </Position6>
+      <Position7>
+        <Filename Value="utama.pas"/>
+        <Caret Line="905" Column="3" TopLine="900"/>
+      </Position7>
+      <Position8>
+        <Filename Value="utama.pas"/>
+        <Caret Line="260" Column="3" TopLine="251"/>
+      </Position8>
+      <Position9>
+        <Filename Value="utama.pas"/>
+        <Caret Line="267" Column="51" TopLine="249"/>
+      </Position9>
+      <Position10>
+        <Filename Value="utama.pas"/>
+        <Caret Line="837" Column="28" TopLine="822"/>
+      </Position10>
+      <Position11>
+        <Filename Value="utama.pas"/>
+        <Caret Line="840" Column="40" TopLine="821"/>
+      </Position11>
+      <Position12>
+        <Filename Value="utama.pas"/>
+        <Caret Line="839" Column="40" TopLine="820"/>
+      </Position12>
+      <Position13>
+        <Filename Value="utama.pas"/>
+        <Caret Line="838" Column="40" TopLine="819"/>
+      </Position13>
+      <Position14>
+        <Filename Value="utama.pas"/>
+        <Caret Line="839" Column="40" TopLine="820"/>
+      </Position14>
+      <Position15>
+        <Filename Value="utama.pas"/>
+        <Caret Line="840" Column="40" TopLine="821"/>
+      </Position15>
+      <Position16>
+        <Filename Value="utama.pas"/>
+        <Caret Line="829" Column="38" TopLine="810"/>
+      </Position16>
+      <Position17>
+        <Filename Value="utama.pas"/>
+        <Caret Line="964" Column="48" TopLine="956"/>
+      </Position17>
+      <Position18>
+        <Filename Value="utama.pas"/>
+        <Caret Line="325" Column="3" TopLine="323"/>
+      </Position18>
+      <Position19>
+        <Filename Value="utama.pas"/>
+        <Caret Line="339" Column="3" TopLine="323"/>
+      </Position19>
+      <Position20>
+        <Filename Value="utama.pas"/>
+        <Caret Line="338" Column="3" TopLine="322"/>
+      </Position20>
+      <Position21>
+        <Filename Value="utama.pas"/>
+        <Caret Line="337" Column="3" TopLine="321"/>
+      </Position21>
+      <Position22>
+        <Filename Value="utama.pas"/>
+        <Caret Line="336" Column="3" TopLine="320"/>
+      </Position22>
+      <Position23>
+        <Filename Value="utama.pas"/>
+        <Caret Line="335" Column="3" TopLine="319"/>
+      </Position23>
+      <Position24>
+        <Filename Value="utama.pas"/>
+        <Caret Line="336" Column="3" TopLine="320"/>
+      </Position24>
+      <Position25>
+        <Filename Value="utama.pas"/>
+        <Caret Line="390" Column="3" TopLine="386"/>
+      </Position25>
+      <Position26>
+        <Filename Value="utama.pas"/>
+        <Caret Line="391" Column="3" TopLine="387"/>
+      </Position26>
+      <Position27>
+        <Filename Value="utama.pas"/>
+        <Caret Line="389" Column="3" TopLine="378"/>
+      </Position27>
+      <Position28>
+        <Filename Value="utama.pas"/>
+        <Caret Line="390" Column="37" TopLine="688"/>
+      </Position28>
+      <Position29>
+        <Filename Value="utama.pas"/>
+        <Caret Line="960" Column="5" TopLine="949"/>
+      </Position29>
+      <Position30>
+        <Filename Value="utama.pas"/>
+        <Caret Line="9" Column="66" TopLine="692"/>
+      </Position30>
     </JumpHistory>
     <RunParams>
       <FormatVersion Value="2"/>

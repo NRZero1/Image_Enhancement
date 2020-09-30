@@ -37,7 +37,7 @@
         <IsPartOfProject Value="True"/>
       </Unit0>
       <Unit1>
-        <Filename Value="..\Prak04\utama.pas"/>
+        <Filename Value="utama.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="FormUtama"/>
         <HasResources Value="True"/>

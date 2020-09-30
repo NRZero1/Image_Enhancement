@@ -13,6 +13,7 @@ type
   { TFormUtama }
 
   TFormUtama = class(TForm)
+    btnBiner: TButton;
     btnSave: TButton;
     btnLoad: TButton;
     btnWarna: TButton;
@@ -20,21 +21,23 @@ type
     btnGreen: TButton;
     btnBlue: TButton;
     btnGray: TButton;
-    btnBiner: TButton;
     btnMonoRed: TButton;
     btnMonoGreen: TButton;
     btnMonoBlue: TButton;
     btnBrightness: TButton;
     btnContrast: TButton;
     btnInvers: TButton;
-    btnScaling: TButton;
+    btnSmooth: TButton;
+    btnSharp: TButton;
+    btnSketsa: TButton;
+    groupBiner: TGroupBox;
+    groupContrast: TGroupBox;
+    groupBrightnes: TGroupBox;
+    groupColor: TGroupBox;
+    groupImage: TGroupBox;
     groupMonochrome: TGroupBox;
-    groupPallete: TGroupBox;
     Image2: TImage;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
-    Label4: TLabel;
+    lblG: TLabel;
     lblBinerValue: TLabel;
     Image1: TImage;
     lblContrastValue: TLabel;
@@ -45,7 +48,6 @@ type
     radioGreen: TRadioButton;
     radioBlue: TRadioButton;
     radioGray: TRadioButton;
-    groupBiner: TRadioGroup;
     SavePictureDialog1: TSavePictureDialog;
     ScrollBox1: TScrollBox;
     ScrollBox2: TScrollBox;
@@ -66,10 +68,14 @@ type
     procedure btnMonoRedClick(Sender: TObject);
     procedure btnRedClick(Sender: TObject);
     procedure btnScalingClick(Sender: TObject);
+    procedure btnSmoothClick(Sender: TObject);
     procedure btnWarnaClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnInversClick(Sender: TObject);
+    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
+    procedure groupPalleteClick(Sender: TObject);
+    procedure Image2Click(Sender: TObject);
     procedure toggleCompareChange(Sender: TObject);
     procedure trackBinerChange(Sender: TObject);
     procedure trackBrightChange(Sender: TObject);
@@ -316,6 +322,11 @@ begin
   end;
 end;
 
+procedure TFormUtama.FormCreate(Sender: TObject);
+begin
+
+end;
+
 procedure TFormUtama.FormShow(Sender: TObject);
 begin
   trackBinerChange(Sender);
@@ -323,6 +334,16 @@ begin
   trackContrastChange(Sender);
   trackGChange(Sender);
   toggleCompareChange(Sender);
+end;
+
+procedure TFormUtama.groupPalleteClick(Sender: TObject);
+begin
+
+end;
+
+procedure TFormUtama.Image2Click(Sender: TObject);
+begin
+
 end;
 
 procedure TFormUtama.toggleCompareChange(Sender: TObject);
@@ -963,6 +984,11 @@ begin
     end;
   end;
   ColorModeChange();
+end;
+
+procedure TFormUtama.btnSmoothClick(Sender: TObject);
+begin
+
 end;
 
 end.
