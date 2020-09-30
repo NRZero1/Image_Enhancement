@@ -169,15 +169,6 @@ object FormUtama: TFormUtama
       OnClick = btnInversClick
       TabOrder = 8
     end
-    object btnScaling: TButton
-      Left = 24
-      Height = 25
-      Top = 296
-      Width = 75
-      Caption = 'Scaling'
-      OnClick = btnScalingClick
-      TabOrder = 9
-    end
   end
   object Label1: TLabel
     Left = 152

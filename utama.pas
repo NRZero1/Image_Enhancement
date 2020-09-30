@@ -27,7 +27,6 @@ type
     btnBrightness: TButton;
     btnContrast: TButton;
     btnInvers: TButton;
-    btnScaling: TButton;
     groupMonochrome: TGroupBox;
     groupPallete: TGroupBox;
     Image2: TImage;
