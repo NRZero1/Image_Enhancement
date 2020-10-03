@@ -459,6 +459,7 @@ object FormUtama: TFormUtama
     Top = 320
     Width = 75
     Caption = 'Sharpening'
+    OnClick = btnSharpClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 9
@@ -470,6 +471,7 @@ object FormUtama: TFormUtama
     Top = 361
     Width = 75
     Caption = 'Sketsa'
+    OnClick = btnSketsaClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 10

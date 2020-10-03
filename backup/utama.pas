@@ -68,6 +68,8 @@ type
     procedure btnMonoRedClick(Sender: TObject);
     procedure btnRedClick(Sender: TObject);
     procedure btnScalingClick(Sender: TObject);
+    procedure btnSharpClick(Sender: TObject);
+    procedure btnSketsaClick(Sender: TObject);
     procedure btnSmoothClick(Sender: TObject);
     procedure btnWarnaClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
@@ -102,6 +104,9 @@ var
   bitmapR, bitmapG, bitmapB: array [0..1000, 0..1000] of Byte;
   bitmapBiner: array[0..1000, 0..1000] of Boolean;
   modeWarna: Boolean;
+  filteredR: Integer;
+  FilteredG: Integer;
+  FilteredB: Integer;
 
 { TFormUtama }
 
@@ -987,6 +992,35 @@ begin
 end;
 
 procedure TFormUtama.btnSmoothClick(Sender: TObject);
+var
+  kernel: array[1..3, 1..3] of Single = ((0.1, 0.1, 0.1),
+  (0.1, 0.1, 0.1),
+  (0.1, 0.1, 0.1));
+  x,y: Integer;
+  i,j: Integer;
+  index_x, index_y: Integer;
+begin
+  filteredR := 0;
+  filteredG := 0;
+  filteredB := 0;
+
+  for y:=0 to Image1.Height-1 then
+  begin
+    for x:=0 to Image1.Width-1 then
+    begin
+      for i:=0 to 3 then
+      begin
+      end;
+    end;
+  end;
+end;
+
+procedure TFormUtama.btnSharpClick(Sender: TObject);
+begin
+
+end;
+
+procedure TFormUtama.btnSketsaClick(Sender: TObject);
 begin
 
 end;
