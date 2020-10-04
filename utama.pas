@@ -102,7 +102,7 @@ var
   bitmapR, bitmapG, bitmapB: array [0..1000, 0..1000] of Byte;
   bitmapBiner: array[0..1000, 0..1000] of Boolean;
   modeWarna: Boolean;
-  filteredR: Double;
+  FilteredR: Double;
   FilteredG: Double;
   FilteredB: Double;
 
@@ -981,9 +981,9 @@ end;
 
 procedure TFormUtama.btnSmoothClick(Sender: TObject);
 var
-  kernel: array[1..3, 1..3] of Single = ((0.1, 0.1, 0.1),
-  (0.1, 0.1, 0.1),
-  (0.1, 0.1, 0.1));
+  kernel: array[1..3, 1..3] of Single = ((1.0/9.0, 1.0/9.0, 1.0/9.0),
+  (1.0/9.0, 1.0/9.0, 1.0/9.0),
+  (1.0/9.0, 1.0/9.0, 1.0/9.0));
   x,y: Integer;
   i,j: Integer;
   index_x, index_y: Integer;
@@ -997,9 +997,9 @@ begin
         filteredR := 0;
         filteredG := 0;
         filteredB := 0;
-        for i:=0 to 3 do
+        for i:=1 to 3 do
         begin
-          for j:=0 to 3 do
+          for j:=1 to 3 do
           begin
             index_x := x + i - 2;
             index_y := y + j - 2;
@@ -1074,9 +1074,9 @@ begin
         filteredR := 0;
         filteredG := 0;
         filteredB := 0;
-        for i:=0 to 3 do
+        for i:=1 to 3 do
         begin
-          for j:=0 to 3 do
+          for j:=1 to 3 do
           begin
             index_x := x + i - 2;
             index_y := y + j - 2;

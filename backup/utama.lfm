@@ -68,7 +68,6 @@ object FormUtama: TFormUtama
     ClientHeight = 256
     ClientWidth = 264
     TabOrder = 1
-    OnClick = ScrollBox1Click
     object Image1: TImage
       Left = 0
       Height = 256
@@ -94,7 +93,6 @@ object FormUtama: TFormUtama
       Top = 0
       Width = 264
       AutoSize = True
-      OnClick = Image2Click
     end
   end
   object groupImage: TGroupBox
