@@ -78,6 +78,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure groupPalleteClick(Sender: TObject);
     procedure Image2Click(Sender: TObject);
+    procedure ScrollBox1Click(Sender: TObject);
     procedure toggleCompareChange(Sender: TObject);
     procedure trackBinerChange(Sender: TObject);
     procedure trackBrightChange(Sender: TObject);
@@ -104,9 +105,9 @@ var
   bitmapR, bitmapG, bitmapB: array [0..1000, 0..1000] of Byte;
   bitmapBiner: array[0..1000, 0..1000] of Boolean;
   modeWarna: Boolean;
-  filteredR: Integer;
-  FilteredG: Integer;
-  FilteredB: Integer;
+  filteredR: Double;
+  FilteredG: Double;
+  FilteredB: Double;
 
 { TFormUtama }
 
@@ -339,16 +340,6 @@ begin
   trackContrastChange(Sender);
   trackGChange(Sender);
   toggleCompareChange(Sender);
-end;
-
-procedure TFormUtama.groupPalleteClick(Sender: TObject);
-begin
-
-end;
-
-procedure TFormUtama.Image2Click(Sender: TObject);
-begin
-
 end;
 
 procedure TFormUtama.toggleCompareChange(Sender: TObject);
@@ -1000,16 +991,156 @@ var
   i,j: Integer;
   index_x, index_y: Integer;
 begin
-  filteredR := 0;
-  filteredG := 0;
-  filteredB := 0;
-
-  for y:=0 to Image1.Height-1 then
+  if toggleCompare.Checked then
   begin
-    for x:=0 to Image1.Width-1 then
+    for y:=0 to Image2.Height-1 do
     begin
-      for i:=0 to 3 then
+      for x:=0 to Image2.Width-1 do
       begin
+        filteredR := 0;
+        filteredG := 0;
+        filteredB := 0;
+        for i:=0 to 3 do
+        begin
+          for j:=0 to 3 do
+          begin
+            index_x := x + i - 2;
+            index_y := y + j - 2;
+
+            if index_x < 0 then
+            begin
+              index_x := 0;
+            end;
+
+            if index_x > Image2.Width-1 then
+            begin
+              index_x := Image2.Width-1;
+            end;
+
+            if index_y < 0 then
+            begin
+              index_y := 0;
+            end;
+
+            if index_y > Image2.Height-1 then
+            begin
+              index_y := Image2.Height-1;
+            end;
+
+            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+          end;
+        end;
+
+        if FilteredR < 0 then
+        begin
+          FilteredR := 0;
+        end;
+
+        if FilteredR > 255 then
+        begin
+          FilteredR := 255;
+        end;
+
+        if FilteredG < 0 then
+        begin
+          FilteredG := 0;
+        end;
+
+        if FilteredG > 255 then
+        begin
+          FilteredG := 255;
+        end;
+
+        if FilteredB < 0 then
+        begin
+          FilteredG := 0;
+        end;
+
+        if FilteredB > 255 then
+        begin
+          FilteredB := 255;
+        end;
+
+        Image2.Canvas.Pixels[x,y] := RGB(Round(FilteredR), Round(FilteredG), Round(FilteredB));
+      end;
+    end;
+  end
+
+  else
+  begin
+    for y:=0 to Image1.Height-1 do
+    begin
+      for x:=0 to Image1.Width-1 do
+      begin
+        filteredR := 0;
+        filteredG := 0;
+        filteredB := 0;
+        for i:=0 to 3 do
+        begin
+          for j:=0 to 3 do
+          begin
+            index_x := x + i - 2;
+            index_y := y + j - 2;
+
+            if index_x < 0 then
+            begin
+              index_x := 0;
+            end;
+
+            if index_x > Image1.Width-1 then
+            begin
+              index_x := Image1.Width-1;
+            end;
+
+            if index_y < 0 then
+            begin
+              index_y := 0;
+            end;
+
+            if index_y > Image1.Height-1 then
+            begin
+              index_y := Image1.Height-1;
+            end;
+
+            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+          end;
+        end;
+
+        if FilteredR < 0 then
+        begin
+          FilteredR := 0;
+        end;
+
+        if FilteredR > 255 then
+        begin
+          FilteredR := 255;
+        end;
+
+        if FilteredG < 0 then
+        begin
+          FilteredG := 0;
+        end;
+
+        if FilteredG > 255 then
+        begin
+          FilteredG := 255;
+        end;
+
+        if FilteredB < 0 then
+        begin
+          FilteredG := 0;
+        end;
+
+        if FilteredB > 255 then
+        begin
+          FilteredB := 255;
+        end;
+
+        Image1.Canvas.Pixels[x,y] := RGB(Round(FilteredR), Round(FilteredG), Round(FilteredB));
       end;
     end;
   end;
