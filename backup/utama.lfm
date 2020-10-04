@@ -1,7 +1,7 @@
 object FormUtama: TFormUtama
-  Left = 177
+  Left = 164
   Height = 610
-  Top = 30
+  Top = 22
   Width = 1100
   Anchors = [akTop]
   Caption = 'Praktikum 1 Load Image dan Memisahkan Warna'
@@ -65,10 +65,10 @@ object FormUtama: TFormUtama
     Width = 268
     HorzScrollBar.Page = 264
     VertScrollBar.Page = 256
-    AutoSize = True
     ClientHeight = 256
     ClientWidth = 264
     TabOrder = 1
+    OnClick = ScrollBox1Click
     object Image1: TImage
       Left = 0
       Height = 256
@@ -85,7 +85,6 @@ object FormUtama: TFormUtama
     HorzScrollBar.Page = 264
     VertScrollBar.Page = 252
     Anchors = [akTop, akRight]
-    AutoSize = True
     ClientHeight = 252
     ClientWidth = 264
     TabOrder = 2
@@ -459,6 +458,7 @@ object FormUtama: TFormUtama
     Top = 320
     Width = 75
     Caption = 'Sharpening'
+    OnClick = btnSharpClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 9
@@ -470,6 +470,7 @@ object FormUtama: TFormUtama
     Top = 361
     Width = 75
     Caption = 'Sketsa'
+    OnClick = btnSketsaClick
     ParentShowHint = False
     ShowHint = True
     TabOrder = 10
