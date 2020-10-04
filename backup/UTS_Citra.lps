@@ -22,7 +22,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Utama"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="976"/>
+        <TopLine Value="978"/>
         <CursorPos X="31" Y="986"/>
         <UsageCount Value="100"/>
         <Loaded Value="True"/>
@@ -171,7 +171,7 @@
       </Position29>
       <Position30>
         <Filename Value="utama.pas"/>
-        <Caret Line="986" Column="15" TopLine="1067"/>
+        <Caret Line="986" Column="31" TopLine="976"/>
       </Position30>
     </JumpHistory>
     <RunParams>

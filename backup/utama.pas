@@ -983,7 +983,7 @@ procedure TFormUtama.btnSmoothClick(Sender: TObject);
 var
   kernel: array[1..3, 1..3] of Single = ((1.0/9.0, 1.0/9.0, 1.0/9.0),
   (1.0/9.0, 1.0/9.0, 1.0/9.0),
-  (1.0/9.0, 1.0/9.0, 1.0/9.0);
+  (1.0/9.0, 1.0/9.0, 1.0/9.0));
   x,y: Integer;
   i,j: Integer;
   index_x, index_y: Integer;
