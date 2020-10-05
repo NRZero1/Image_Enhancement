@@ -994,9 +994,9 @@ begin
     begin
       for x:=0 to Image2.Width-1 do
       begin
-        filteredR := 0;
-        filteredG := 0;
-        filteredB := 0;
+        FilteredR := 0;
+        FilteredG := 0;
+        FilteredB := 0;
         for i:=1 to 3 do
         begin
           for j:=1 to 3 do
@@ -1071,9 +1071,9 @@ begin
     begin
       for x:=0 to Image1.Width-1 do
       begin
-        filteredR := 0;
-        filteredG := 0;
-        filteredB := 0;
+        FilteredR := 0;
+        FilteredG := 0;
+        FilteredB := 0;
         for i:=1 to 3 do
         begin
           for j:=1 to 3 do
@@ -1158,9 +1158,9 @@ begin
     begin
       for x:=0 to Image2.Width-1 do
       begin
-        filteredR := 0;
-        filteredG := 0;
-        filteredB := 0;
+        FilteredR := 0;
+        FilteredG := 0;
+        FilteredB := 0;
         for i:=1 to 3 do
         begin
           for j:=1 to 3 do
@@ -1235,9 +1235,9 @@ begin
     begin
       for x:=0 to Image1.Width-1 do
       begin
-        filteredR := 0;
-        filteredG := 0;
-        filteredB := 0;
+        FilteredR := 0;
+        FilteredG := 0;
+        FilteredB := 0;
         for i:=1 to 3 do
         begin
           for j:=1 to 3 do
