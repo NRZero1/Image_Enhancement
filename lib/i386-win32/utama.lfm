@@ -1,7 +1,7 @@
 object FormUtama: TFormUtama
-  Left = 274
+  Left = 164
   Height = 610
-  Top = 47
+  Top = 22
   Width = 1100
   Anchors = [akTop]
   Caption = 'Praktikum 1 Load Image dan Memisahkan Warna'
@@ -14,7 +14,7 @@ object FormUtama: TFormUtama
   object groupMonochrome: TGroupBox
     Left = 760
     Height = 58
-    Top = 70
+    Top = 7
     Width = 332
     Anchors = [akTop, akRight]
     Caption = 'Monochrome'
@@ -59,13 +59,12 @@ object FormUtama: TFormUtama
     end
   end
   object ScrollBox1: TScrollBox
-    Left = 136
+    Left = 128
     Height = 260
-    Top = 104
+    Top = 80
     Width = 268
     HorzScrollBar.Page = 264
     VertScrollBar.Page = 256
-    AutoSize = True
     ClientHeight = 256
     ClientWidth = 264
     TabOrder = 1
@@ -78,13 +77,13 @@ object FormUtama: TFormUtama
     end
   end
   object ScrollBox2: TScrollBox
-    Left = 440
+    Left = 464
     Height = 256
-    Top = 108
+    Top = 80
     Width = 268
     HorzScrollBar.Page = 264
     VertScrollBar.Page = 252
-    AutoSize = True
+    Anchors = [akTop, akRight]
     ClientHeight = 252
     ClientWidth = 264
     TabOrder = 2
@@ -94,13 +93,12 @@ object FormUtama: TFormUtama
       Top = 0
       Width = 264
       AutoSize = True
-      OnClick = Image2Click
     end
   end
   object groupImage: TGroupBox
     Left = 8
     Height = 56
-    Top = 0
+    Top = 7
     Width = 336
     Caption = 'Image'
     ClientHeight = 36
@@ -158,7 +156,7 @@ object FormUtama: TFormUtama
   object groupColor: TGroupBox
     Left = 8
     Height = 186
-    Top = 70
+    Top = 79
     Width = 96
     Caption = 'Color'
     ClientHeight = 166
@@ -228,7 +226,7 @@ object FormUtama: TFormUtama
   object groupBiner: TGroupBox
     Left = 760
     Height = 138
-    Top = 142
+    Top = 79
     Width = 332
     Anchors = [akTop, akRight]
     Caption = 'Biner Color'
@@ -315,7 +313,7 @@ object FormUtama: TFormUtama
   object groupBrightnes: TGroupBox
     Left = 759
     Height = 112
-    Top = 296
+    Top = 233
     Width = 333
     Anchors = [akTop, akRight]
     Caption = 'Brightnes'
@@ -363,7 +361,7 @@ object FormUtama: TFormUtama
   object groupContrast: TGroupBox
     Left = 760
     Height = 174
-    Top = 424
+    Top = 361
     Width = 332
     Anchors = [akTop, akRight]
     Caption = 'Contrast'
@@ -439,12 +437,48 @@ object FormUtama: TFormUtama
       ShowHint = True
     end
   end
+  object btnSmooth: TButton
+    Left = 16
+    Height = 25
+    Hint = 'Smoohing'
+    Top = 280
+    Width = 75
+    Caption = 'Smoothing'
+    OnClick = btnSmoothClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 8
+  end
+  object btnSharp: TButton
+    Left = 16
+    Height = 25
+    Hint = 'Sharpening'
+    Top = 320
+    Width = 75
+    Caption = 'Sharpening'
+    OnClick = btnSharpClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 9
+  end
+  object btnSketsa: TButton
+    Left = 16
+    Height = 25
+    Hint = 'Sketsa'
+    Top = 361
+    Width = 75
+    Caption = 'Sketsa'
+    OnClick = btnSketsaClick
+    ParentShowHint = False
+    ShowHint = True
+    TabOrder = 10
+  end
   object SavePictureDialog1: TSavePictureDialog
-    left = 840
-    top = 16
+    left = 416
+    top = 24
   end
   object OpenPictureDialog1: TOpenPictureDialog
-    left = 984
-    top = 16
+    left = 560
+    top = 24
   end
 end
