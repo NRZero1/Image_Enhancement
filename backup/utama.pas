@@ -75,7 +75,6 @@ type
     procedure btnSaveClick(Sender: TObject);
     procedure btnInversClick(Sender: TObject);
     procedure FormShow(Sender: TObject);
-    procedure groupBinerClick(Sender: TObject);
     procedure toggleCompareChange(Sender: TObject);
     procedure trackBinerChange(Sender: TObject);
     procedure trackBrightChange(Sender: TObject);
