@@ -74,7 +74,6 @@ type
     procedure btnWarnaClick(Sender: TObject);
     procedure btnSaveClick(Sender: TObject);
     procedure btnInversClick(Sender: TObject);
-    procedure FormCreate(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure toggleCompareChange(Sender: TObject);
     procedure trackBinerChange(Sender: TObject);
@@ -323,11 +322,6 @@ begin
       end;
     end;
   end;
-end;
-
-procedure TFormUtama.FormCreate(Sender: TObject);
-begin
-
 end;
 
 procedure TFormUtama.FormShow(Sender: TObject);
@@ -1024,9 +1018,20 @@ begin
               index_y := Image2.Height-1;
             end;
 
-            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
-            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
-            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            if modeWarna then
+            begin
+              FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+              FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+              FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            end
+
+            else
+            begin
+              FilteredR := FilteredR + Red(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredG := FilteredG + Green(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredB := FilteredB + Blue(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+            end;
+
           end;
         end;
 
@@ -1101,9 +1106,20 @@ begin
               index_y := Image1.Height-1;
             end;
 
-            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
-            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
-            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            if modeWarna then
+            begin
+              FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+              FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+              FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            end
+
+            else
+            begin
+              FilteredR := FilteredR + Red(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredG := FilteredG + Green(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredB := FilteredB + Blue(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+            end;
+
           end;
         end;
 
@@ -1188,9 +1204,20 @@ begin
               index_y := Image2.Height-1;
             end;
 
-            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
-            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
-            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            if modeWarna then
+            begin
+              FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+              FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+              FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            end
+
+            else
+            begin
+              FilteredR := FilteredR + Red(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredG := FilteredG + Green(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredB := FilteredB + Blue(Image2.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+            end;
+
           end;
         end;
 
@@ -1265,9 +1292,20 @@ begin
               index_y := Image1.Height-1;
             end;
 
-            FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
-            FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
-            FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            if modeWarna then
+            begin
+              FilteredR := FilteredR + bitmapR[index_x, index_y] * kernel[i, j];
+              FilteredG := FilteredG + bitmapG[index_x, index_y] * kernel[i, j];
+              FilteredB := FilteredB + bitmapB[index_x, index_y] * kernel[i, j];
+            end
+
+            else
+            begin
+              FilteredR := FilteredR + Red(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredG := FilteredG + Green(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+              FilteredB := FilteredB + Blue(Image1.Canvas.Pixels[index_x, index_y]) * kernel[i, j];
+            end;
+
           end;
         end;
 
