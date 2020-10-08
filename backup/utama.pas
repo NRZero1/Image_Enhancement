@@ -99,7 +99,7 @@ uses
 
 var
   bitmapR, bitmapG, bitmapB: array [0..1000, 0..1000] of Byte;
-  bitmapBiner: array[0..1000, 0..1000] of Boolean;
+  bitmapBiner: Boolean;
   modeWarna: Boolean;
   FilteredR: Double;
   FilteredG: Double;
@@ -816,19 +816,22 @@ begin
 
   if toggleCompare.Checked then
   begin
-    for y:=0 to Image2.Height-1 do
+    {*for y:=0 to Image2.Height-1 do
     begin
       for x:=0 to Image2.Width-1 do
       begin
         bitmapBiner[x,y] := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
       end;
-    end;
+    end;*}
 
     for y:=0 to Image2.Height-1 do
     begin
       for x:=0 to Image2.Width-1 do
       begin
-        if bitmapBiner[x,y] = True then
+
+        bitmapBiner := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
+
+        if bitmapBiner = True then
         begin
           Image2.Canvas.Pixels[x,y] := RGB(255,255,255);
         end
@@ -857,19 +860,22 @@ begin
 
   else
   begin
-    for y:=0 to Image1.Height-1 do
+    {*for y:=0 to Image1.Height-1 do
     begin
       for x:=0 to Image1.Width-1 do
       begin
         bitmapBiner[x,y] := trackBiner.Position > Red(Image1.Canvas.Pixels[x,y]);
       end;
-    end;
+    end;*}
 
     for y:=0 to Image1.Height-1 do
     begin
       for x:=0 to Image1.Width-1 do
       begin
-        if bitmapBiner[x,y] = True then
+
+        bitmapBiner := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
+
+        if bitmapBiner = True then
         begin
           Image1.Canvas.Pixels[x,y] := RGB(255,255,255);
         end
@@ -1346,7 +1352,182 @@ begin
 end;
 
 procedure TFormUtama.btnSketsaClick(Sender: TObject);
+var
+  kernel: array[1..3, 1..3] of integer =
+  ((-1, -1, -1),
+  (-1, 8, -1),
+  (-1, -1, -1));
+  gray: array[1..1000, 1..1000] of Byte;
+  bitmapFilterGray: array[1..1000, 1..1000] of Byte;
+
+  x,y: Integer;
+  i,j: Integer;
+  index_x, index_y: Integer;
+  filterGray, inversGray: Integer;
+
 begin
+  if toggleCompare.Checked then
+  begin
+    for y:=0 to Image2.Height-1 do
+    begin
+      for x:=0 to Image2.Width-1 do
+      begin
+        gray[x,y] := (bitmapR[x,y] + bitmapG[x,y] + bitmapB[x,y]) div 3;
+      end;
+    end;
+
+    for y:=0 to Image2.Height-1 do
+    begin
+      for x:=0 to Image2.Width-1 do
+      begin
+        filterGray := 0;
+        for i:=1 to 3 do
+        begin
+          for j:=1 to 3 do
+          begin
+            index_x := x + i - 2;
+            index_y := y + j - 2;
+
+            if index_x < 0 then
+            begin
+              index_x := 0;
+            end;
+
+            if index_x > Image2.Width-1 then
+            begin
+              index_x := Image2.Width-1;
+            end;
+
+            if index_y < 0 then
+            begin
+              index_y := 0;
+            end;
+
+            if index_y > Image2.Height-1 then
+            begin
+              index_y := Image2.Height-1;
+            end;
+
+            filterGray := filterGray + gray[index_x, index_y] * kernel[i, j];
+          end;
+        end;
+
+        if filterGray < 0 then
+        begin
+          filterGray := 0;
+        end;
+
+        if filterGray > 255 then
+        begin
+          filterGray := 255;
+        end;
+
+      bitmapFilterGray[x,y] := filterGray;
+      end;
+    end;
+
+      for y:=0 to Image2.Height-1 do
+      begin
+        for x:=0 to Image2.Width-1 do
+        begin
+          inversGray := 255 - bitmapFilterGray[x, y];
+
+          if inversGray < 0 then
+          begin
+            inversGray := 0;
+          end;
+
+          if inversGray > 255 then
+          begin
+            inversGray := 255;
+          end;
+
+          Image2.Canvas.Pixels[x,y] := RGB(inversGray, inversGray, inversGray);
+        end;
+      end;
+  end
+
+  else
+
+  begin
+    for y:=0 to Image1.Height-1 do
+    begin
+      for x:=0 to Image1.Width-1 do
+      begin
+        gray[x,y] := (bitmapR[x,y] + bitmapG[x,y] + bitmapB[x,y]) div 3;
+      end;
+    end;
+
+    for y:=0 to Image1.Height-1 do
+    begin
+      for x:=0 to Image1.Width-1 do
+      begin
+        filterGray := 0;
+        for i:=1 to 3 do
+        begin
+          for j:=1 to 3 do
+          begin
+            index_x := x + i - 2;
+            index_y := y + j - 2;
+
+            if index_x < 0 then
+            begin
+              index_x := 0;
+            end;
+
+            if index_x > Image1.Width-1 then
+            begin
+              index_x := Image1.Width-1;
+            end;
+
+            if index_y < 0 then
+            begin
+              index_y := 0;
+            end;
+
+            if index_y > Image1.Height-1 then
+            begin
+              index_y := Image1.Height-1;
+            end;
+
+            filterGray := filterGray + gray[index_x, index_y] * kernel[i, j];
+          end;
+        end;
+
+        if filterGray < 0 then
+        begin
+          filterGray := 0;
+        end;
+
+        if filterGray > 255 then
+        begin
+          filterGray := 255;
+        end;
+
+      bitmapFilterGray[x,y] := filterGray;
+      end;
+    end;
+
+      for y:=0 to Image1.Height-1 do
+      begin
+        for x:=0 to Image1.Width-1 do
+        begin
+          inversGray := 255 - bitmapFilterGray[x, y];
+
+          if inversGray < 0 then
+          begin
+            inversGray := 0;
+          end;
+
+          if inversGray > 255 then
+          begin
+            inversGray := 255;
+          end;
+
+          Image1.Canvas.Pixels[x,y] := RGB(inversGray, inversGray, inversGray);
+        end;
+      end;
+  end;
 
 end;
 

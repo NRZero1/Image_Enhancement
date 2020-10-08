@@ -1351,8 +1351,8 @@ var
   ((-1, -1, -1),
   (-1, 8, -1),
   (-1, -1, -1));
-  gray: array[1..1000, 1..1000] of Byte;
-  bitmapFilterGray: array[1..1000, 1..1000] of Byte;
+  gray: array[0..1000, 0..1000] of Byte;
+  bitmapFilterGray: array[0..1000, 0..1000] of Byte;
 
   x,y: Integer;
   i,j: Integer;

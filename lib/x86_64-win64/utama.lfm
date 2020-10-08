@@ -1,17 +1,17 @@
 object FormUtama: TFormUtama
   Left = 164
-  Height = 610
+  Height = 599
   Top = 22
-  Width = 1100
+  Width = 1096
   Anchors = [akTop]
   Caption = 'Praktikum 1 Load Image dan Memisahkan Warna'
-  ClientHeight = 610
-  ClientWidth = 1100
+  ClientHeight = 599
+  ClientWidth = 1096
   OnShow = FormShow
   Position = poDesktopCenter
   LCLVersion = '2.0.6.0'
   object groupMonochrome: TGroupBox
-    Left = 760
+    Left = 756
     Height = 58
     Top = 7
     Width = 332
@@ -19,6 +19,7 @@ object FormUtama: TFormUtama
     Caption = 'Monochrome'
     ClientHeight = 38
     ClientWidth = 328
+    ParentFont = False
     TabOrder = 0
     object btnMonoRed: TButton
       Left = 5
@@ -28,6 +29,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Red'
       OnClick = btnMonoRedClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -40,6 +42,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Green'
       OnClick = btnMonoGreenClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -52,6 +55,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Blue'
       OnClick = btnMonoBlueClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
@@ -66,6 +70,7 @@ object FormUtama: TFormUtama
     VertScrollBar.Page = 256
     ClientHeight = 256
     ClientWidth = 264
+    ParentFont = False
     TabOrder = 1
     object Image1: TImage
       Left = 0
@@ -76,7 +81,7 @@ object FormUtama: TFormUtama
     end
   end
   object ScrollBox2: TScrollBox
-    Left = 464
+    Left = 460
     Height = 256
     Top = 80
     Width = 268
@@ -85,6 +90,7 @@ object FormUtama: TFormUtama
     Anchors = [akTop, akRight]
     ClientHeight = 252
     ClientWidth = 264
+    ParentFont = False
     TabOrder = 2
     object Image2: TImage
       Left = 0
@@ -102,6 +108,7 @@ object FormUtama: TFormUtama
     Caption = 'Image'
     ClientHeight = 36
     ClientWidth = 332
+    ParentFont = False
     TabOrder = 3
     object btnWarna: TButton
       Left = 168
@@ -111,6 +118,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Reset'
       OnClick = btnWarnaClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -123,6 +131,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Load'
       OnClick = btnLoadClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -135,6 +144,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Save'
       OnClick = btnSaveClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
@@ -147,6 +157,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Compare'
       OnChange = toggleCompareChange
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 3
@@ -160,6 +171,7 @@ object FormUtama: TFormUtama
     Caption = 'Color'
     ClientHeight = 166
     ClientWidth = 92
+    ParentFont = False
     TabOrder = 4
     object btnRed: TButton
       Left = 8
@@ -169,6 +181,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Red'
       OnClick = btnRedClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -181,6 +194,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Green'
       OnClick = btnGreenClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -193,6 +207,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Blue'
       OnClick = btnBlueClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
@@ -205,6 +220,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Gray'
       OnClick = btnGrayClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 3
@@ -217,13 +233,14 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Invers'
       OnClick = btnInversClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 4
     end
   end
   object groupBiner: TGroupBox
-    Left = 760
+    Left = 756
     Height = 138
     Top = 79
     Width = 332
@@ -231,6 +248,7 @@ object FormUtama: TFormUtama
     Caption = 'Biner Color'
     ClientHeight = 118
     ClientWidth = 328
+    ParentFont = False
     TabOrder = 5
     object radioRed: TRadioButton
       Left = 11
@@ -238,6 +256,7 @@ object FormUtama: TFormUtama
       Top = 48
       Width = 40
       Caption = 'Red'
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -248,6 +267,7 @@ object FormUtama: TFormUtama
       Top = 48
       Width = 51
       Caption = 'Green'
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -258,6 +278,7 @@ object FormUtama: TFormUtama
       Top = 48
       Width = 43
       Caption = 'Blue'
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
@@ -268,6 +289,7 @@ object FormUtama: TFormUtama
       Top = 48
       Width = 70
       Caption = 'Grayscale'
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 3
@@ -280,6 +302,7 @@ object FormUtama: TFormUtama
       Width = 72
       Caption = 'Biner'
       OnClick = btnBinerClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 4
@@ -293,6 +316,7 @@ object FormUtama: TFormUtama
       Max = 255
       OnChange = trackBinerChange
       Position = 127
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 5
@@ -305,12 +329,13 @@ object FormUtama: TFormUtama
       Width = 36
       Caption = '            '
       ParentColor = False
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
     end
   end
   object groupBrightnes: TGroupBox
-    Left = 759
+    Left = 755
     Height = 112
     Top = 233
     Width = 333
@@ -318,6 +343,7 @@ object FormUtama: TFormUtama
     Caption = 'Brightnes'
     ClientHeight = 92
     ClientWidth = 329
+    ParentFont = False
     TabOrder = 6
     object btnBrightness: TButton
       Left = 5
@@ -327,6 +353,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Brightness'
       OnClick = btnBrightnessClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -341,6 +368,7 @@ object FormUtama: TFormUtama
       Min = -255
       OnChange = trackBrightChange
       Position = 0
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -353,12 +381,13 @@ object FormUtama: TFormUtama
       Width = 36
       Caption = '            '
       ParentColor = False
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
     end
   end
   object groupContrast: TGroupBox
-    Left = 760
+    Left = 756
     Height = 174
     Top = 361
     Width = 332
@@ -366,6 +395,7 @@ object FormUtama: TFormUtama
     Caption = 'Contrast'
     ClientHeight = 154
     ClientWidth = 328
+    ParentFont = False
     TabOrder = 7
     object btnContrast: TButton
       Left = 5
@@ -375,6 +405,7 @@ object FormUtama: TFormUtama
       Width = 75
       Caption = 'Contrast'
       OnClick = btnContrastClick
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 0
@@ -388,6 +419,7 @@ object FormUtama: TFormUtama
       Max = 255
       OnChange = trackContrastChange
       Position = 0
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 1
@@ -399,6 +431,7 @@ object FormUtama: TFormUtama
       Width = 39
       Caption = 'G Value'
       ParentColor = False
+      ParentFont = False
     end
     object trackG: TTrackBar
       Left = 4
@@ -409,6 +442,7 @@ object FormUtama: TFormUtama
       Min = 1
       OnChange = trackGChange
       Position = 1
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
       TabOrder = 2
@@ -421,6 +455,7 @@ object FormUtama: TFormUtama
       Width = 36
       Caption = '            '
       ParentColor = False
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
     end
@@ -432,6 +467,7 @@ object FormUtama: TFormUtama
       Width = 36
       Caption = '            '
       ParentColor = False
+      ParentFont = False
       ParentShowHint = False
       ShowHint = True
     end
@@ -444,6 +480,7 @@ object FormUtama: TFormUtama
     Width = 75
     Caption = 'Smoothing'
     OnClick = btnSmoothClick
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 8
@@ -456,6 +493,7 @@ object FormUtama: TFormUtama
     Width = 75
     Caption = 'Sharpening'
     OnClick = btnSharpClick
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 9
@@ -468,6 +506,7 @@ object FormUtama: TFormUtama
     Width = 75
     Caption = 'Sketsa'
     OnClick = btnSketsaClick
+    ParentFont = False
     ParentShowHint = False
     ShowHint = True
     TabOrder = 10
