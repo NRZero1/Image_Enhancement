@@ -99,7 +99,7 @@ uses
 
 var
   bitmapR, bitmapG, bitmapB: array [0..1000, 0..1000] of Byte;
-  bitmapBiner: Boolean;
+  bitmapBiner: array[0..1000, 0..1000] of Boolean;
   modeWarna: Boolean;
   FilteredR: Double;
   FilteredG: Double;
@@ -816,22 +816,19 @@ begin
 
   if toggleCompare.Checked then
   begin
-    {*for y:=0 to Image2.Height-1 do
+    for y:=0 to Image2.Height-1 do
     begin
       for x:=0 to Image2.Width-1 do
       begin
         bitmapBiner[x,y] := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
       end;
-    end;*}
+    end;
 
     for y:=0 to Image2.Height-1 do
     begin
       for x:=0 to Image2.Width-1 do
       begin
-
-        bitmapBiner := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
-
-        if bitmapBiner = True then
+        if bitmapBiner[x,y] = True then
         begin
           Image2.Canvas.Pixels[x,y] := RGB(255,255,255);
         end
@@ -860,22 +857,19 @@ begin
 
   else
   begin
-    {*for y:=0 to Image1.Height-1 do
+    for y:=0 to Image1.Height-1 do
     begin
       for x:=0 to Image1.Width-1 do
       begin
         bitmapBiner[x,y] := trackBiner.Position > Red(Image1.Canvas.Pixels[x,y]);
       end;
-    end;*}
+    end;
 
     for y:=0 to Image1.Height-1 do
     begin
       for x:=0 to Image1.Width-1 do
       begin
-
-        bitmapBiner := trackBiner.Position > Red(Image2.Canvas.Pixels[x,y]);
-
-        if bitmapBiner = True then
+        if bitmapBiner[x,y] = True then
         begin
           Image1.Canvas.Pixels[x,y] := RGB(255,255,255);
         end
@@ -1167,7 +1161,7 @@ end;
 
 procedure TFormUtama.btnSharpClick(Sender: TObject);
 var
-  kernel: array[1..3, 1..3] of Single = ((-1, -1, -1),
+  kernel: array[1..3, 1..3] of Integer = ((-1, -1, -1),
   (-1, 9, -1),
   (-1, -1, -1));
   x,y: Integer;
@@ -1357,8 +1351,8 @@ var
   ((-1, -1, -1),
   (-1, 8, -1),
   (-1, -1, -1));
-  gray: array[1..1000, 1..1000] of Byte;
-  bitmapFilterGray: array[1..1000, 1..1000] of Byte;
+  gray: array[0..1000, 0..1000] of Byte;
+  bitmapFilterGray: array[0..1000, 0..1000] of Byte;
 
   x,y: Integer;
   i,j: Integer;
